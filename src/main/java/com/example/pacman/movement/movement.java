@@ -1,11 +1,13 @@
 package com.example.pacman.movement;
 
+import javafx.scene.Node;
 import javafx.scene.input.KeyCode;
 
 import static com.example.pacman.HelloApplication.root;
-import static com.example.pacman.mapLoad.karakter;
+import static com.example.pacman.mapLoad.*;
 
 public class movement {
+
     public static void karakterMove() {
         root.getScene().setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.W) {
@@ -27,3 +29,6 @@ public class movement {
         });
     }
 }
+
+
+

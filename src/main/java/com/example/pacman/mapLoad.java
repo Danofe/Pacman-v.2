@@ -1,5 +1,6 @@
 package com.example.pacman;
 
+import com.example.pacman.movement.movement;
 import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;

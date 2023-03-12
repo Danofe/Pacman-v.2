@@ -10,6 +10,7 @@ public class collision {
     public static void collision() {
         karakterCollision();
         poengCollision();
+       // ghostCollision();
     }
     public static void karakterCollision() {
         for (Node kloss : kartBlock) {
@@ -32,11 +33,13 @@ public class collision {
     public static void poengCollision() {
         for (Node poeng : poengListe) {
             if (karakter.getBoundsInParent().intersects(poeng.getBoundsInParent())) {
+
+                ui.points++;
                 poeng.setVisible(false);
-                ui.poeng();
+                poengListe.remove(poeng);
                 ui.poengLabel.setText("Poeng: " + ui.points);
             }
         }
-
     }
 }
+
