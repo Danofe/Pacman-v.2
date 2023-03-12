@@ -18,12 +18,16 @@ import static com.example.pacman.mapLoad.karakter;
 
 public class HelloApplication extends Application {
     public static Pane root = new Pane();
-    public static Pane vinduEnheter = new Pane();
-    public static Pane uiVindu = new Pane();
+    static Pane vinduEnheter = new Pane();
+    static Pane uiVindu = new Pane();
 
     @Override
     public void start(Stage stage) throws IOException {
-        mapLoad.setKart();
+        mapLoad kart = new mapLoad();
+        ui ui = new ui();
+        collision collision = new collision();
+        movement movement = new movement();
+        kart.setKart();
         ui.lagUi();
 
         Scene scene = new Scene(root);
@@ -32,11 +36,12 @@ public class HelloApplication extends Application {
         stage.show();
 
         AnimationTimer timer = new AnimationTimer() {
+
             @Override
             public void handle(long now) {
                 movement.karakterMove();
                 collision.collision();
-                //movement.gMove();
+                movement.ghostMove();
             }
         };
         timer.start();

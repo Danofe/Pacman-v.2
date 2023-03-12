@@ -22,7 +22,8 @@ public class mapLoad {
     public static ArrayList<Node> poengListe = new ArrayList<Node>();
 
 
-    public static void setKart() {
+    public void setKart() {
+        enhet enhet = new enhet();
         Rectangle kart = new Rectangle(1190, 840);
         for (int i = 0; i < Map.KART.length; i++) {
             String linje = Map.KART[i];
@@ -38,7 +39,7 @@ public class mapLoad {
                         break;
                     case '2':
                         Node gKloss = lagBlokk.lagBlokk(j * 35, i * 35, 35, 35, Color.RED);
-                        enhet.lagEnhet(j * 35, i * 35, 35, 35, new Image("file:src/main/java/com/example/pacman/assets/ghost-pacman.gif"));
+                        Ghost = enhet.lagEnhet(j * 35, i * 35, 30, 30, new Image("file:src/main/java/com/example/pacman/assets/ghost-pacman.gif"));
                         GhostList.add(Ghost);
                         break;
                 }

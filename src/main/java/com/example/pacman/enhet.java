@@ -8,7 +8,7 @@ import javafx.scene.shape.Circle;
 
 public class enhet {
 
-    public static Node lagEnhet(int x, int y, int w, int h, Image image) {
+    public Node lagEnhet(int x, int y, int w, int h, Image image) {
         ImageView enhet = new ImageView();
         enhet.setImage(image);
         enhet.setTranslateX(x);
@@ -20,7 +20,7 @@ public class enhet {
         return enhet;
     }
 
-    public static Node lagPoeng(int x, int y, boolean vis) {
+    public Node lagPoeng(int x, int y, boolean vis) {
         Circle poeng = new Circle();
         poeng.setCenterX(x + 17);
         poeng.setCenterY(y + 17);

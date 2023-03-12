@@ -7,12 +7,12 @@ import static com.example.pacman.mapLoad.*;
 
 public class collision {
 
-    public static void collision() {
+     public void collision() {
         karakterCollision();
         poengCollision();
-       // ghostCollision();
+        ghostCollisionV();
     }
-    public static void karakterCollision() {
+    public void karakterCollision() {
         for (Node kloss : kartBlock) {
             if (karakter.getBoundsInParent().intersects(kloss.getBoundsInParent())) {
                 if (karakter.getTranslateX() < kloss.getTranslateX()) {
@@ -30,7 +30,7 @@ public class collision {
             }
         }
     }
-    public static void poengCollision() {
+    public void poengCollision() {
         for (Node poeng : poengListe) {
             if (karakter.getBoundsInParent().intersects(poeng.getBoundsInParent())) {
 
@@ -41,5 +41,25 @@ public class collision {
             }
         }
     }
+
+public void ghostCollisionV() {
+         for (Node Kloss : kartBlock) {
+            if (Ghost.getBoundsInParent().intersects(Kloss.getBoundsInParent())) {
+                if (Ghost.getTranslateX() < Kloss.getTranslateX()) {
+                    Ghost.setTranslateX(Ghost.getTranslateX() - 3);
+                }
+                if (Ghost.getTranslateX() > Kloss.getTranslateX()) {
+                    Ghost.setTranslateX(Ghost.getTranslateX() + 3);
+                }
+                if (Ghost.getTranslateY() < Kloss.getTranslateY()) {
+                    Ghost.setTranslateY(Ghost.getTranslateY() - 3);
+                }
+                if (Ghost.getTranslateY() > Kloss.getTranslateY()) {
+                    Ghost.setTranslateY(Ghost.getTranslateY() + 2);
+                }
+            }
+        }
+    }
+
 }
 

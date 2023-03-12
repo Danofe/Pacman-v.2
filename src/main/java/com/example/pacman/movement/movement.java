@@ -8,7 +8,7 @@ import static com.example.pacman.mapLoad.*;
 
 public class movement {
 
-    public static void karakterMove() {
+    public void karakterMove() {
         root.getScene().setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.W) {
                 karakter.setTranslateY(karakter.getTranslateY() - 3);
