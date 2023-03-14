@@ -6,6 +6,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
+
 public class enhet {
 
     public Node lagEnhet(int x, int y, int w, int h, Image image) {
@@ -32,6 +33,4 @@ public class enhet {
 
         return poeng;
     }
-
-
 }

@@ -5,21 +5,19 @@ import com.example.pacman.movement.movement;
 import com.example.pacman.ui.ui;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
-import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
-import static com.example.pacman.mapLoad.karakter;
+import static com.example.pacman.mapLoad.aktivLevel;
 
 public class HelloApplication extends Application {
     public static Pane root = new Pane();
-    static Pane vinduEnheter = new Pane();
-    static Pane uiVindu = new Pane();
+    public static Pane vinduEnheter = new Pane();
+    public static Pane uiVindu = new Pane();
+
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -27,25 +25,27 @@ public class HelloApplication extends Application {
         ui ui = new ui();
         collision collision = new collision();
         movement movement = new movement();
-        kart.setKart();
-        ui.lagUi();
+        ui.SelectLevelUi();
+        root.getChildren().add(uiVindu);
+
 
         Scene scene = new Scene(root);
         stage.setTitle("PacMan");
         stage.setScene(scene);
         stage.show();
 
-        AnimationTimer timer = new AnimationTimer() {
 
-            @Override
-            public void handle(long now) {
-                movement.karakterMove();
-                collision.collision();
-                movement.ghostMove();
-            }
-        };
-        timer.start();
-    }
+            AnimationTimer timer = new AnimationTimer() {
+                @Override
+                public void handle(long now) {
+                    if (aktivLevel) {
+                        movement.karakterMove();
+                        collision.collision();
+                    }
+                }
+            };
+            timer.start();
+}
 
     public static void main(String[] args) {
         launch();
