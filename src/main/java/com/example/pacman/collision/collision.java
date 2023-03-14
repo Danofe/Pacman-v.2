@@ -10,11 +10,16 @@ import static com.example.pacman.mapLoad.*;
 
 public class collision {
     ui ui = new ui();
+    public static int blinkyRetning;
+    public static int pinkyRetning;
+    public static int inkyRetning;
+    public static int clydeRetning;
+
 
      public void collision() {
         karakterCollision();
         poengCollision();
-        ghostCollisionV();
+        ghostCollisionV(blinky);
         karakterDød();
     }
     public void karakterCollision() {
@@ -50,21 +55,35 @@ public class collision {
 
         }
      }
-public void ghostCollisionV() {
-    for (Node Ghost : GhostList) {
+    public void ghostCollisionV(Node ghost) {
         for (Node Kloss : kartBlock) {
-            if (Ghost.getBoundsInParent().intersects(Kloss.getBoundsInParent())) {
-                if (Ghost.getTranslateX() < Kloss.getTranslateX()) {
-                    Ghost.setTranslateX(Ghost.getTranslateX() - 3);
+            if (ghost.getBoundsInParent().intersects(Kloss.getBoundsInParent())) {
+                if (ghost.getTranslateX() < Kloss.getTranslateX()) {
+                    ghost.setTranslateX(ghost.getTranslateX() - 3);
+                    blinkyRetning = (int)(Math.random()*4);
+                    if(blinkyRetning == 0) {
+                        blinkyRetning = (int)(Math.random()*4);
                     }
-                if (Ghost.getTranslateX() > Kloss.getTranslateX()) {
-                    Ghost.setTranslateX(Ghost.getTranslateX() + 3);
+                }
+                if (ghost.getTranslateX() > Kloss.getTranslateX()) {
+                    ghost.setTranslateX(ghost.getTranslateX() + 3);
+                    blinkyRetning = (int)(Math.random()*4);
+                    if(blinkyRetning == 1) {
+                        blinkyRetning = (int)(Math.random()*4);
                     }
-                if (Ghost.getTranslateY() < Kloss.getTranslateY()) {
-                    Ghost.setTranslateY(Ghost.getTranslateY() - 3);
+                }
+                if (ghost.getTranslateY() < Kloss.getTranslateY()) {
+                    ghost.setTranslateY(ghost.getTranslateY() - 3);
+                    blinkyRetning = (int)(Math.random()*4);
+                    if(blinkyRetning == 2) {
+                        blinkyRetning = (int)(Math.random()*4);
                     }
-                if (Ghost.getTranslateY() > Kloss.getTranslateY()) {
-                    Ghost.setTranslateY(Ghost.getTranslateY() + 2);
+                }
+                if (ghost.getTranslateY() > Kloss.getTranslateY()) {
+                    ghost.setTranslateY(ghost.getTranslateY() + 2);
+                    blinkyRetning = (int)(Math.random()*4);
+                    if(blinkyRetning == 3) {
+                        blinkyRetning = (int)(Math.random()*4);
                     }
                 }
             }

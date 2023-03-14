@@ -17,7 +17,10 @@ public class mapLoad {
     public static boolean aktivLevel = false;
     public static Node karakter;
 
-    public static Node Ghost;
+    public static Node blinky;
+    public static Node pinky;
+    public static Node inky;
+    public static Node clyde;
     public static ArrayList<Node> GhostList = new ArrayList<Node>();
 
     public static ArrayList<Node> kartBlock = new ArrayList<Node>();
@@ -43,9 +46,24 @@ public class mapLoad {
                         kartBlock.add(kloss);
                         break;
                     case '2':
-                        Node gKloss = lagBlokk.lagBlokk(j * 35, i * 35, 35, 35, Color.RED);
-                        Ghost = enhet.lagEnhet(j * 35, i * 35, 30, 30, new Image("file:src/main/java/com/example/pacman/assets/ghost-pacman.gif"));
-                        GhostList.add(Ghost);
+                        //Node gKloss = lagBlokk.lagBlokk(j * 35, i * 35, 35, 35, Color.RED);
+                        blinky = enhet.lagEnhet(j * 35, i * 35, 30, 30, new Image("file:src/main/java/com/example/pacman/assets/ghost-pacman.gif"));
+                        GhostList.add(blinky);
+                        break;
+                    case '3':
+                        //Node ggKloss = lagBlokk.lagBlokk(j * 35, i * 35, 35, 35, Color.RED);
+                        pinky = enhet.lagEnhet(j * 35, i * 35, 30, 30, new Image("file:src/main/java/com/example/pacman/assets/ghost-pacman.gif"));
+                        GhostList.add(pinky);
+                        break;
+                    case '4':
+                        //Node gggKloss = lagBlokk.lagBlokk(j * 35, i * 35, 35, 35, Color.RED);
+                        inky = enhet.lagEnhet(j * 35, i * 35, 30, 30, new Image("file:src/main/java/com/example/pacman/assets/ghost-pacman.gif"));
+                        GhostList.add(inky);
+                        break;
+                    case '5':
+                        //Node ggggKloss = lagBlokk.lagBlokk(j * 35, i * 35, 35, 35, Color.RED);
+                        clyde = enhet.lagEnhet(j * 35, i * 35, 30, 30, new Image("file:src/main/java/com/example/pacman/assets/ghost-pacman.gif"));
+                        GhostList.add(clyde);
                         break;
                 }
             }

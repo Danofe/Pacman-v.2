@@ -11,7 +11,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import static com.example.pacman.mapLoad.aktivLevel;
+import static com.example.pacman.collision.collision.*;
+import static com.example.pacman.mapLoad.*;
 
 public class HelloApplication extends Application {
     public static Pane root = new Pane();
@@ -41,6 +42,13 @@ public class HelloApplication extends Application {
                     if (aktivLevel) {
                         movement.karakterMove();
                         collision.collision();
+                        movement.GhostMove(blinky,blinkyRetning);
+                        //movement.GhostMove(pinky,pinkyRetning);
+                        //collision.ghostCollisionV(inky);
+                        //movement.GhostMove(inky,inkyRetning);
+                        //collision.ghostCollisionV(inky);
+                        //movement.GhostMove(clyde,clydeRetning);
+                        //collision.ghostCollisionV(clyde);
                     }
                 }
             };

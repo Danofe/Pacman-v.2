@@ -36,6 +36,22 @@ public class movement {
             }
         });
     }
+    public void GhostMove(Node ghost, int retning) {
+        switch(retning) {
+            case 0 :
+                ghost.setTranslateX(ghost.getTranslateX()-1);
+                break;
+            case 1:
+                ghost.setTranslateX(ghost.getTranslateX()+1);
+                break;
+            case 2:
+                ghost.setTranslateY(ghost.getTranslateY()+1);
+                break;
+            case 3:
+                ghost.setTranslateY(ghost.getTranslateY()-1);
+                break;
+        }
+    }
 }
 
 
