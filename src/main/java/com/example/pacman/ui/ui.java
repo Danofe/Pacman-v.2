@@ -44,16 +44,16 @@ public class ui {
         Button SelectLevel2 = new Button();
         Button SelectLevel3 = new Button();
         SelectLevel.setText("Level 1");
-        SelectLevel.setTranslateX(x/2 - 100);
-        SelectLevel.setTranslateY(y/2 - 100);
+        SelectLevel.setTranslateX(x/2+275);
+        SelectLevel.setTranslateY(y/2+200);
         SelectLevel.setStyle("-fx-font-size: 30px; -fx-font-weight: bold;");
         SelectLevel2.setText("Level 2");
-        SelectLevel2.setTranslateX(x/2 - 100);
-        SelectLevel2.setTranslateY(y/2);
+        SelectLevel2.setTranslateX(x/2+275);
+        SelectLevel2.setTranslateY(y/2+250);
         SelectLevel2.setStyle("-fx-font-size: 30px; -fx-font-weight: bold;");
         SelectLevel3.setText("Level 3");
-        SelectLevel3.setTranslateX(x/2 - 100);
-        SelectLevel3.setTranslateY(y/2 + 100);
+        SelectLevel3.setTranslateX(x/2+275);
+        SelectLevel3.setTranslateY(y/2+300);
         SelectLevel3.setStyle("-fx-font-size: 30px; -fx-font-weight: bold;");
 
         VBox vbox = new VBox();
@@ -81,6 +81,7 @@ public class ui {
         });
         HelloApplication.uiVindu.getChildren().addAll(rect, vbox);
     }
+
 
 
 }

@@ -21,6 +21,25 @@ public class enhet {
         return enhet;
     }
 
+    public Node lagGhost(int x, int y, int w, int h, Image image) {
+        ImageView enhet = new ImageView();
+        enhet.setImage(image);
+        enhet.setTranslateX(x);
+        enhet.setTranslateY(y);
+        enhet.setFitWidth(w);
+        enhet.setFitHeight(h);
+        HelloApplication.ghost.getChildren().add(enhet);
+
+        return enhet;
+    }
+    public Node byttBilde(Image image) {
+        ImageView enhet = new ImageView();
+        enhet.setImage(image);
+        HelloApplication.vinduEnheter.getChildren().add(enhet);
+
+        return enhet;
+    }
+
     public Node lagPoeng(int x, int y, boolean vis) {
         Circle poeng = new Circle();
         poeng.setCenterX(x + 17);

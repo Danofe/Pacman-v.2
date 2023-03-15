@@ -24,6 +24,7 @@ public class collision {
         ghostCollisionV3(inky);
         ghostCollisionV4(clyde);
         karakterDod();
+        powerUpActive();
     }
     public void karakterCollision() {
         for (Node kloss : kartBlock) {
@@ -94,38 +95,38 @@ public class collision {
     }
 
     public void ghostCollisionV2(Node ghost) {
-        for (Node Kloss : kartBlock) {
-            if (ghost.getBoundsInParent().intersects(Kloss.getBoundsInParent())) {
-                if (ghost.getTranslateX() < Kloss.getTranslateX()) {
-                    ghost.setTranslateX(ghost.getTranslateX() - 3);
-                    blinkyRetning = (int)(Math.random()*4);
-                    if(blinkyRetning == 0) {
-                        blinkyRetning = (int)(Math.random()*4);
-                    }
-                }
-                if (ghost.getTranslateX() > Kloss.getTranslateX()) {
-                    ghost.setTranslateX(ghost.getTranslateX() + 3);
-                    blinkyRetning = (int)(Math.random()*4);
-                    if(blinkyRetning == 1) {
-                        blinkyRetning = (int)(Math.random()*4);
-                    }
-                }
-                if (ghost.getTranslateY() < Kloss.getTranslateY()) {
-                    ghost.setTranslateY(ghost.getTranslateY() - 3);
-                    blinkyRetning = (int)(Math.random()*4);
-                    if(blinkyRetning == 2) {
-                        blinkyRetning = (int)(Math.random()*4);
-                    }
-                }
-                if (ghost.getTranslateY() > Kloss.getTranslateY()) {
-                    ghost.setTranslateY(ghost.getTranslateY() + 2);
-                    blinkyRetning = (int)(Math.random()*4);
-                    if(blinkyRetning == 3) {
-                        blinkyRetning = (int)(Math.random()*4);
-                    }
-                }
-            }
-        }
+             for (Node Kloss : kartBlock) {
+                 if (ghost.getBoundsInParent().intersects(Kloss.getBoundsInParent())) {
+                     if (ghost.getTranslateX() < Kloss.getTranslateX()) {
+                         ghost.setTranslateX(ghost.getTranslateX() - 3);
+                         blinkyRetning = (int) (Math.random() * 4);
+                         if (blinkyRetning == 0) {
+                             blinkyRetning = (int) (Math.random() * 4);
+                         }
+                     }
+                     if (ghost.getTranslateX() > Kloss.getTranslateX()) {
+                         ghost.setTranslateX(ghost.getTranslateX() + 3);
+                         blinkyRetning = (int) (Math.random() * 4);
+                         if (blinkyRetning == 1) {
+                             blinkyRetning = (int) (Math.random() * 4);
+                         }
+                     }
+                     if (ghost.getTranslateY() < Kloss.getTranslateY()) {
+                         ghost.setTranslateY(ghost.getTranslateY() - 3);
+                         blinkyRetning = (int) (Math.random() * 4);
+                         if (blinkyRetning == 2) {
+                             blinkyRetning = (int) (Math.random() * 4);
+                         }
+                     }
+                     if (ghost.getTranslateY() > Kloss.getTranslateY()) {
+                         ghost.setTranslateY(ghost.getTranslateY() + 2);
+                         blinkyRetning = (int) (Math.random() * 4);
+                         if (blinkyRetning == 3) {
+                             blinkyRetning = (int) (Math.random() * 4);
+                         }
+                     }
+                 }
+             }
     }
 
     public void ghostCollisionV3(Node ghost) {
@@ -198,10 +199,6 @@ public class collision {
         }
     }
 
-
-
-
-
     public void karakterDod() {
         try {
             for (Node Ghost : GhostList) {
@@ -213,5 +210,17 @@ public class collision {
 
         }
     }
+    public void powerUpActive() {
+        try {
+        for (Node power : powerList) {
+            if (karakter.getBoundsInParent().intersects(power.getBoundsInParent())) {
+                power.setVisible(false);
+                powerList.remove(power);
+            }
+
+        }
+            } catch (Exception e) {
+        }
+     }
 }
 

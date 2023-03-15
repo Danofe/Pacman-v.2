@@ -9,13 +9,17 @@ import javafx.scene.shape.Rectangle;
 
 import java.util.ArrayList;
 
-import static com.example.pacman.HelloApplication.uiVindu;
-import static com.example.pacman.HelloApplication.vinduEnheter;
+import static com.example.pacman.HelloApplication.*;
 
+
+/**
+ * Klasse for å loade map og enheter
+ */
 public class mapLoad {
 
     public static boolean aktivLevel = false;
     public static Node karakter;
+    public static Node powerUp;
 
     public static Node blinky;
     public static Node pinky;
@@ -26,13 +30,18 @@ public class mapLoad {
     public static ArrayList<Node> kartBlock = new ArrayList<Node>();
 
     public static ArrayList<Node> poengListe = new ArrayList<Node>();
+    public static ArrayList<Node> powerList = new ArrayList<Node>();
 
-    public static int x = 1190;
-    public static int y = 840;
+    public static int x = 525;
+    public static int y = 525;
 
+
+    /**
+     * @param map
+     */
     public void setKart(String[] map) {
         enhet enhet = new enhet();
-        Rectangle kart = new Rectangle(1190, 840);
+        Rectangle kart = new Rectangle(x, y);
         for (int i = 0; i < map.length; i++) {
             String linje = map[i];
             for (int j = 0; j < linje.length(); j++) {
@@ -47,24 +56,29 @@ public class mapLoad {
                         break;
                     case '2':
                         //Node gKloss = lagBlokk.lagBlokk(j * 35, i * 35, 35, 35, Color.RED);
-                        blinky = enhet.lagEnhet(j * 35, i * 35, 30, 30, new Image("file:src/main/java/com/example/pacman/assets/ghost-pacman.gif"));
+                        blinky = enhet.lagGhost(j * 35, i * 35, 30, 30, new Image("file:src/main/java/com/example/pacman/assets/blinkyGif.gif"));
                         GhostList.add(blinky);
                         break;
                     case '3':
                         //Node ggKloss = lagBlokk.lagBlokk(j * 35, i * 35, 35, 35, Color.RED);
-                        pinky = enhet.lagEnhet(j * 35, i * 35, 30, 30, new Image("file:src/main/java/com/example/pacman/assets/ghost-pacman.gif"));
+                        pinky = enhet.lagGhost(j * 35, i * 35, 30, 30, new Image("file:src/main/java/com/example/pacman/assets/pinkyGif.gif"));
                         GhostList.add(pinky);
                         break;
                     case '4':
                         //Node gggKloss = lagBlokk.lagBlokk(j * 35, i * 35, 35, 35, Color.RED);
-                        inky = enhet.lagEnhet(j * 35, i * 35, 30, 30, new Image("file:src/main/java/com/example/pacman/assets/ghost-pacman.gif"));
+                        inky = enhet.lagGhost(j * 35, i * 35, 30, 30, new Image("file:src/main/java/com/example/pacman/assets/inkyGif.gif"));
                         GhostList.add(inky);
                         break;
                     case '5':
                         //Node ggggKloss = lagBlokk.lagBlokk(j * 35, i * 35, 35, 35, Color.RED);
-                        clyde = enhet.lagEnhet(j * 35, i * 35, 30, 30, new Image("file:src/main/java/com/example/pacman/assets/ghost-pacman.gif"));
+                        clyde = enhet.lagGhost(j * 35, i * 35, 30, 30, new Image("file:src/main/java/com/example/pacman/assets/clydeGif.gif"));
                         GhostList.add(clyde);
                         break;
+                    case '6':
+                        powerUp= enhet.lagEnhet(j * 35, i * 35, 30, 30, new Image("file:src/main/java/com/example/pacman/assets/power.png"));
+                        powerList.add(powerUp);
+                        break;
+
                 }
             }
         }
@@ -72,7 +86,7 @@ public class mapLoad {
         aktivLevel = true;
         ui ui = new ui();
         ui.lagUi();
-        HelloApplication.root.getChildren().addAll(kart, vinduEnheter);
+        HelloApplication.root.getChildren().addAll(kart, vinduEnheter,ghost);
         HelloApplication.root.getChildren().remove(uiVindu);
     }
 }

@@ -15,6 +15,7 @@ public class HelloApplication extends Application {
     public static Pane root = new Pane();
     public static Pane vinduEnheter = new Pane();
     public static Pane uiVindu = new Pane();
+    public static Pane ghost = new Pane();
 
     @Override
     public void start(Stage stage) throws IOException {
