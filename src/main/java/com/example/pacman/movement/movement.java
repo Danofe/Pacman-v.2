@@ -8,9 +8,18 @@ import javafx.scene.input.KeyEvent;
 import java.util.Random;
 
 import static com.example.pacman.HelloApplication.root;
+import static com.example.pacman.collision.collision.*;
+import static com.example.pacman.collision.collision.clydeRetning;
 import static com.example.pacman.mapLoad.*;
 
 public class movement {
+
+    public void moveGhost() {
+        GhostMove(blinky, blinkyRetning);
+        GhostMove(pinky, pinkyRetning);
+       GhostMove(inky, inkyRetning);
+       GhostMove(clyde, clydeRetning);
+    }
 
 
     public void karakterMove() {

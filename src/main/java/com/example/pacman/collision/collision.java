@@ -10,8 +10,8 @@ import static com.example.pacman.mapLoad.*;
 
 public class collision {
     ui ui = new ui();
-    public static int blinkyRetning;
     public static int pinkyRetning;
+    public static int blinkyRetning;
     public static int inkyRetning;
     public static int clydeRetning;
 
@@ -19,8 +19,11 @@ public class collision {
      public void collision() {
         karakterCollision();
         poengCollision();
-        ghostCollisionV(blinky);
-        karakterDød();
+        ghostCollisionV2(blinky);
+        ghostCollisionV(pinky);
+        ghostCollisionV3(inky);
+        ghostCollisionV4(clyde);
+        karakterDod();
     }
     public void karakterCollision() {
         for (Node kloss : kartBlock) {
@@ -60,6 +63,41 @@ public class collision {
             if (ghost.getBoundsInParent().intersects(Kloss.getBoundsInParent())) {
                 if (ghost.getTranslateX() < Kloss.getTranslateX()) {
                     ghost.setTranslateX(ghost.getTranslateX() - 3);
+                    pinkyRetning = (int)(Math.random()*4);
+                    if(pinkyRetning == 0) {
+                        pinkyRetning = (int)(Math.random()*4);
+                    }
+                }
+                if (ghost.getTranslateX() > Kloss.getTranslateX()) {
+                    ghost.setTranslateX(ghost.getTranslateX() + 3);
+                    pinkyRetning = (int)(Math.random()*4);
+                    if(pinkyRetning == 1) {
+                       pinkyRetning = (int)(Math.random()*4);
+                    }
+                }
+                if (ghost.getTranslateY() < Kloss.getTranslateY()) {
+                    ghost.setTranslateY(ghost.getTranslateY() - 3);
+                    pinkyRetning = (int)(Math.random()*4);
+                    if(pinkyRetning == 2) {
+                        pinkyRetning = (int)(Math.random()*4);
+                    }
+                }
+                if (ghost.getTranslateY() > Kloss.getTranslateY()) {
+                    ghost.setTranslateY(ghost.getTranslateY() + 2);
+                    pinkyRetning = (int)(Math.random()*4);
+                    if(pinkyRetning == 3) {
+                        pinkyRetning = (int)(Math.random()*4);
+                    }
+                }
+            }
+        }
+    }
+
+    public void ghostCollisionV2(Node ghost) {
+        for (Node Kloss : kartBlock) {
+            if (ghost.getBoundsInParent().intersects(Kloss.getBoundsInParent())) {
+                if (ghost.getTranslateX() < Kloss.getTranslateX()) {
+                    ghost.setTranslateX(ghost.getTranslateX() - 3);
                     blinkyRetning = (int)(Math.random()*4);
                     if(blinkyRetning == 0) {
                         blinkyRetning = (int)(Math.random()*4);
@@ -90,12 +128,89 @@ public class collision {
         }
     }
 
-    public void karakterDød() {
-        for (Node Ghost : GhostList) {
-            if (karakter.getBoundsInParent().intersects(Ghost.getBoundsInParent())) {
-
-
+    public void ghostCollisionV3(Node ghost) {
+        for (Node Kloss : kartBlock) {
+            if (ghost.getBoundsInParent().intersects(Kloss.getBoundsInParent())) {
+                if (ghost.getTranslateX() < Kloss.getTranslateX()) {
+                    ghost.setTranslateX(ghost.getTranslateX() - 3);
+                    inkyRetning = (int)(Math.random()*4);
+                    if(inkyRetning == 0) {
+                        inkyRetning = (int)(Math.random()*4);
+                    }
+                }
+                if (ghost.getTranslateX() > Kloss.getTranslateX()) {
+                    ghost.setTranslateX(ghost.getTranslateX() + 3);
+                    inkyRetning = (int)(Math.random()*4);
+                    if(inkyRetning == 1) {
+                        inkyRetning = (int)(Math.random()*4);
+                    }
+                }
+                if (ghost.getTranslateY() < Kloss.getTranslateY()) {
+                    ghost.setTranslateY(ghost.getTranslateY() - 3);
+                    inkyRetning = (int)(Math.random()*4);
+                    if(inkyRetning == 2) {
+                        inkyRetning = (int)(Math.random()*4);
+                    }
+                }
+                if (ghost.getTranslateY() > Kloss.getTranslateY()) {
+                    ghost.setTranslateY(ghost.getTranslateY() + 2);
+                    inkyRetning = (int)(Math.random()*4);
+                    if(inkyRetning == 3) {
+                        inkyRetning = (int)(Math.random()*4);
+                    }
+                }
             }
+        }
+    }
+
+    public void ghostCollisionV4(Node ghost) {
+        for (Node Kloss : kartBlock) {
+            if (ghost.getBoundsInParent().intersects(Kloss.getBoundsInParent())) {
+                if (ghost.getTranslateX() < Kloss.getTranslateX()) {
+                    ghost.setTranslateX(ghost.getTranslateX() - 3);
+                    clydeRetning = (int)(Math.random()*4);
+                    if(clydeRetning == 0) {
+                        clydeRetning = (int)(Math.random()*4);
+                    }
+                }
+                if (ghost.getTranslateX() > Kloss.getTranslateX()) {
+                    ghost.setTranslateX(ghost.getTranslateX() + 3);
+                    clydeRetning = (int)(Math.random()*4);
+                    if(clydeRetning == 1) {
+                        clydeRetning = (int)(Math.random()*4);
+                    }
+                }
+                if (ghost.getTranslateY() < Kloss.getTranslateY()) {
+                    ghost.setTranslateY(ghost.getTranslateY() - 3);
+                    clydeRetning = (int)(Math.random()*4);
+                    if(clydeRetning == 2) {
+                        clydeRetning = (int)(Math.random()*4);
+                    }
+                }
+                if (ghost.getTranslateY() > Kloss.getTranslateY()) {
+                    ghost.setTranslateY(ghost.getTranslateY() + 2);
+                    clydeRetning = (int)(Math.random()*4);
+                    if(clydeRetning == 3) {
+                        clydeRetning = (int)(Math.random()*4);
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+    public void karakterDod() {
+        try {
+            for (Node Ghost : GhostList) {
+                if (karakter.getBoundsInParent().intersects(Ghost.getBoundsInParent())) {
+                    System.out.println("Du døde");
+                }
+            }
+        } catch (Exception e) {
+
         }
     }
 }
