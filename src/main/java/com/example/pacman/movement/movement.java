@@ -22,26 +22,31 @@ public class movement {
     }
 
 
+    int retningKar;
     public void karakterMove() {
         int x = (int) karakter.getTranslateX();
         int y = (int) karakter.getTranslateY();
 
         root.getScene().setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.W) {
-                karakter.setTranslateY(y - 3);
+                //karakter.setTranslateY(y - 3);
                 karakter.setRotate(270);
+                retningKar = 0;
             }
             if (event.getCode() == KeyCode.S) {
-                karakter.setTranslateY(y + 3);
+                //karakter.setTranslateY(y + 3);
                 karakter.setRotate(-270);
+                retningKar = 1;
             }
             if (event.getCode() == KeyCode.A) {
-                karakter.setTranslateX(x - 3);
+                //karakter.setTranslateX(x - 3);
                 karakter.setRotate(540);
+                retningKar = 2;
             }
             if (event.getCode() == KeyCode.D) {
-                karakter.setTranslateX(x + 3);
+                //karakter.setTranslateX(x + 3);
                 karakter.setRotate(0);
+                retningKar = 3;
             }
         });
     }
@@ -58,6 +63,22 @@ public class movement {
                 break;
             case 3:
                 ghost.setTranslateY(ghost.getTranslateY()-1);
+                break;
+        }
+    }
+    public void karakterSwitch() {
+        switch(retningKar) {
+            case 0:
+                karakter.setTranslateY(karakter.getTranslateY()-1);
+                break;
+            case 1:
+                karakter.setTranslateY(karakter.getTranslateY()+1);
+                break;
+            case 2:
+                karakter.setTranslateX(karakter.getTranslateX()-1);
+                break;
+            case 3:
+                karakter.setTranslateX(karakter.getTranslateX()+1);
                 break;
         }
     }

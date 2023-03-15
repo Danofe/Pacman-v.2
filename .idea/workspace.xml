@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fac8983a-ba6a-4bec-86be-7af07eb65277" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pacman/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pacman/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pacman/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pacman/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pacman/collision/collision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pacman/collision/collision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pacman/movement/movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pacman/movement/movement.java" afterDir="false" />
-    </list>
+    <list default="true" id="fac8983a-ba6a-4bec-86be-7af07eb65277" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +24,7 @@
     </option>
   </component>
   <component name="ProjectId" id="2MzDPehmS281CYI1tmzWcKlr0bj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />

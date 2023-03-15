@@ -39,6 +39,7 @@ public class HelloApplication extends Application {
                         movement.karakterMove();
                         collision.collision();
                         movement.moveGhost();
+                        movement.karakterSwitch();
                     }
                 }
             };
