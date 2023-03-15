@@ -1,5 +1,9 @@
 package com.example.pacman;
 
+/**
+ * Klasse med String arrays for å lage kartet, og karakterer.
+ * De forskjellige tallene, representerer forskjellige type nodes
+ */
 public class Map {
 
         public static final String[] LEVEL1 = new String[] {

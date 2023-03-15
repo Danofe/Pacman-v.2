@@ -25,14 +25,11 @@ public class HelloApplication extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
-        mapLoad kart = new mapLoad();
         ui ui = new ui();
         collision collision = new collision();
         movement movement = new movement();
         ui.SelectLevelUi();
         root.getChildren().add(uiVindu);
-
-
         Scene scene = new Scene(root);
         stage.setTitle("PacMan");
         stage.setScene(scene);

@@ -12,8 +12,14 @@ import static com.example.pacman.collision.collision.*;
 import static com.example.pacman.collision.collision.clydeRetning;
 import static com.example.pacman.mapLoad.*;
 
+/**
+ * Klasse for bevegelse av karakteren og ghosts
+ */
 public class movement {
 
+    /**
+     * Samling av alle ghost movements
+     */
     public void moveGhost() {
         GhostMove(blinky, blinkyRetning);
         GhostMove(pinky, pinkyRetning);
@@ -21,33 +27,36 @@ public class movement {
        GhostMove(clyde, clydeRetning);
     }
     int retningKar;
+    /**
+     * Gir en ny verdi til retningKar, utifra hvilken knapp du trykker på (WASD)
+     * denne brukes igjen i karakterSwitch for å bevege PacMan
+     */
     public void karakterMove() {
-        int x = (int) karakter.getTranslateX();
-        int y = (int) karakter.getTranslateY();
-
         root.getScene().setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.W) {
-                //karakter.setTranslateY(y - 3);
                 karakter.setRotate(270);
                 retningKar = 0;
             }
             if (event.getCode() == KeyCode.S) {
-                //karakter.setTranslateY(y + 3);
                 karakter.setRotate(-270);
                 retningKar = 1;
             }
             if (event.getCode() == KeyCode.A) {
-                //karakter.setTranslateX(x - 3);
                 karakter.setRotate(540);
                 retningKar = 2;
             }
             if (event.getCode() == KeyCode.D) {
-                //karakter.setTranslateX(x + 3);
                 karakter.setRotate(0);
                 retningKar = 3;
             }
         });
     }
+
+    /**
+     * Metode som tar inn et spøkelse, og retningen, og beveger den utifra retning, ved bruk av en switch
+     * @param ghost Hvilket ghost som skal beveges
+     * @param retning Hvilken retning den skal gå (tilfeldig fått gjennom ghostCollision metoden)
+     */
     public void GhostMove(Node ghost, int retning) {
         switch(retning) {
             case 0 :
@@ -64,6 +73,10 @@ public class movement {
                 break;
         }
     }
+
+    /**
+     * En switch som beveger PacMan utifra retningen (retningKar) som blir bestemt i karakterMove
+     */
     public void karakterSwitch() {
         switch(retningKar) {
             case 0:
