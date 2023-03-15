@@ -37,7 +37,7 @@ public class mapLoad {
 
 
     /**
-     * @param map
+     * Metode for å loade kart og enheter sjekker hvilken level som er aktiv og loade kartet. Den sjekker level i map.Java. Loader inn nodene i vinduet. basert på tallene i map.java
      */
     public void setKart(String[] map) {
         enhet enhet = new enhet();

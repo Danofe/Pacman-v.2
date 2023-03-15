@@ -7,8 +7,14 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 
+/**
+ * Klasse for å lage enheter som pacman, ghost og poeng
+ */
 public class enhet {
 
+    /**
+     * Lager en node objekt for enhet/Bilde, Blir brukt pacman
+     */
     public Node lagEnhet(int x, int y, int w, int h, Image image) {
         ImageView enhet = new ImageView();
         enhet.setImage(image);
@@ -21,6 +27,9 @@ public class enhet {
         return enhet;
     }
 
+    /**
+     * Lager en node objekt for enhet/Bilde, Blir brukt for ghost
+     */
     public Node lagGhost(int x, int y, int w, int h, Image image) {
         ImageView enhet = new ImageView();
         enhet.setImage(image);
@@ -32,14 +41,10 @@ public class enhet {
 
         return enhet;
     }
-    public Node byttBilde(Image image) {
-        ImageView enhet = new ImageView();
-        enhet.setImage(image);
-        HelloApplication.vinduEnheter.getChildren().add(enhet);
 
-        return enhet;
-    }
-
+    /**
+     * Lager en node objekt for poeng
+     */
     public Node lagPoeng(int x, int y, boolean vis) {
         Circle poeng = new Circle();
         poeng.setCenterX(x + 17);

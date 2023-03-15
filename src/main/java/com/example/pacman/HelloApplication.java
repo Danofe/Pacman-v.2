@@ -17,6 +17,12 @@ public class HelloApplication extends Application {
     public static Pane uiVindu = new Pane();
     public static Pane ghost = new Pane();
 
+    /**
+     * @param stage setter stage og scene
+     * @throws IOException
+     * setter opp vindu og starter timer
+     * timeren kjører metoder fra movement og collision klassene
+     */
     @Override
     public void start(Stage stage) throws IOException {
         mapLoad kart = new mapLoad();
@@ -34,6 +40,12 @@ public class HelloApplication extends Application {
 
 
             AnimationTimer timer = new AnimationTimer() {
+                /**
+                 * @param now kjører metoder fra movement og collision klassene
+                 *            hvis aktivLevel er true
+                 *           aktivLevel blir true når en level er valgt
+                 *            aktivLevel blir false når en level er ferdig
+                 */
                 @Override
                 public void handle(long now) {
                     if (aktivLevel) {

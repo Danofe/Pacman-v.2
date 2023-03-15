@@ -4,6 +4,9 @@ import javafx.scene.Node;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+/**
+ * Klasse for å lage blokker gir en node objekt alle noder som blir laget på denne måten blir lagt til vinduEnheter og en array av nodes
+ */
 public class lagBlokk {
 
     public static Node lagBlokk(int x, int y, int w, int h, Color color) {

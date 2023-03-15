@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fac8983a-ba6a-4bec-86be-7af07eb65277" name="Changes" comment="" />
+    <list default="true" id="fac8983a-ba6a-4bec-86be-7af07eb65277" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pacman/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pacman/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pacman/collision/collision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pacman/collision/collision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pacman/enhet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pacman/enhet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pacman/lagBlokk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pacman/lagBlokk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pacman/mapLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pacman/mapLoad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pacman/movement/movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pacman/movement/movement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pacman/ui/ui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pacman/ui/ui.java" afterDir="false" />
+    </list>
+    <list id="a5d4a3a1-bd14-4376-9740-9271e59366b4" name="Changes by Oscar" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pacman/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pacman/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pacman/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pacman/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/pacman/movement/movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/pacman/movement/movement.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +27,31 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/com/example/pacman/HelloApplication.java">
+      <ranges>
+        <range start1="19" end1="19" start2="19" end2="25" changelist="fac8983a-ba6a-4bec-86be-7af07eb65277" />
+        <range start1="21" end1="22" start2="27" end2="27" changelist="a5d4a3a1-bd14-4376-9740-9271e59366b4" />
+        <range start1="27" end1="29" start2="32" end2="32" changelist="a5d4a3a1-bd14-4376-9740-9271e59366b4" />
+        <range start1="36" end1="36" start2="39" end2="45" changelist="fac8983a-ba6a-4bec-86be-7af07eb65277" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/com/example/pacman/movement/movement.java">
+      <ranges>
+        <range start1="14" end1="14" start2="14" end2="17" changelist="a5d4a3a1-bd14-4376-9740-9271e59366b4" />
+        <range start1="16" end1="16" start2="19" end2="22" changelist="a5d4a3a1-bd14-4376-9740-9271e59366b4" />
+        <range start1="22" end1="24" start2="28" end2="28" changelist="fac8983a-ba6a-4bec-86be-7af07eb65277" />
+        <range start1="25" end1="25" start2="29" end2="33" changelist="a5d4a3a1-bd14-4376-9740-9271e59366b4" />
+        <range start1="26" end1="29" start2="34" end2="34" changelist="a5d4a3a1-bd14-4376-9740-9271e59366b4" />
+        <range start1="31" end1="32" start2="36" end2="36" changelist="a5d4a3a1-bd14-4376-9740-9271e59366b4" />
+        <range start1="36" end1="37" start2="40" end2="40" changelist="a5d4a3a1-bd14-4376-9740-9271e59366b4" />
+        <range start1="41" end1="42" start2="44" end2="44" changelist="a5d4a3a1-bd14-4376-9740-9271e59366b4" />
+        <range start1="46" end1="47" start2="48" end2="48" changelist="a5d4a3a1-bd14-4376-9740-9271e59366b4" />
+        <range start1="52" end1="52" start2="53" end2="59" changelist="a5d4a3a1-bd14-4376-9740-9271e59366b4" />
+        <range start1="68" end1="68" start2="75" end2="79" changelist="a5d4a3a1-bd14-4376-9740-9271e59366b4" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -29,19 +69,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Oscar/Documents/GitHub/Pacman-v.2/src/main/java/com/example/pacman/assets",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Oscar/Documents/GitHub/Pacman-v.2/src/main/java/com/example/pacman/assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Oscar\Documents\GitHub\Pacman-v.2\src\main\java\com\example\pacman\assets" />

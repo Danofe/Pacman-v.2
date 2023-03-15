@@ -8,6 +8,9 @@ import javafx.scene.image.Image;
 import static com.example.pacman.HelloApplication.vinduEnheter;
 import static com.example.pacman.mapLoad.*;
 
+/**
+ * Klasse for collision metoder
+ */
 public class collision {
     ui ui = new ui();
     public static int pinkyRetning;
@@ -16,6 +19,9 @@ public class collision {
     public static int clydeRetning;
 
 
+    /**
+     * samling av metodene
+     */
      public void collision() {
         karakterCollision();
         poengCollision();
@@ -26,6 +32,10 @@ public class collision {
         karakterDod();
         powerUpActive();
     }
+
+    /**
+     * collision mellom karakter og vegger
+     */
     public void karakterCollision() {
         for (Node kloss : kartBlock) {
             if (karakter.getBoundsInParent().intersects(kloss.getBoundsInParent())) {
@@ -44,6 +54,10 @@ public class collision {
             }
         }
     }
+
+    /**
+     * collision mellom karakter og poeng
+     */
     public void poengCollision() {
          try {
              for (Node poeng : poengListe) {
@@ -59,6 +73,12 @@ public class collision {
 
         }
      }
+
+    /**
+     * @param ghost Hvilket spøkelse som skal sjekkes
+     * Metode for å sjekke collision mellom spøkelse og vegger og bytte retning
+     * samme med V2, V3 og V4
+     */
     public void ghostCollisionV(Node ghost) {
         for (Node Kloss : kartBlock) {
             if (ghost.getBoundsInParent().intersects(Kloss.getBoundsInParent())) {
@@ -199,6 +219,10 @@ public class collision {
         }
     }
 
+    /**
+     * Metode som sjekker om karakteren kolliderer med spøkelse og dør
+     * ingen ting skjer bare en melding i konsollen
+     */
     public void karakterDod() {
         try {
             for (Node Ghost : GhostList) {
@@ -210,6 +234,10 @@ public class collision {
 
         }
     }
+
+    /**
+     * Metode som sjekker om karakteren kolliderer med powerup og fjerner den fra listen
+     */
     public void powerUpActive() {
         try {
         for (Node power : powerList) {

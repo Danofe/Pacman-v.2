@@ -20,8 +20,6 @@ public class movement {
        GhostMove(inky, inkyRetning);
        GhostMove(clyde, clydeRetning);
     }
-
-
     int retningKar;
     public void karakterMove() {
         int x = (int) karakter.getTranslateX();

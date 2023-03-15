@@ -16,6 +16,9 @@ import static com.example.pacman.Map.*;
 import static com.example.pacman.mapLoad.*;
 
 
+/**
+ * klasse for alle ui elementer
+ */
 public class ui {
     public static int points = 0;
     public static Label poengLabel;
@@ -25,6 +28,9 @@ public class ui {
     }
 
 
+    /**
+     * lager poeng label
+     */
     public void lagUi() {
         poengLabel = new Label();
         poengLabel.setTranslateX(10);
@@ -35,6 +41,9 @@ public class ui {
         HelloApplication.vinduEnheter.getChildren().add(poengLabel);
     }
 
+    /**
+     * Lager ui for å velge en level og kjører mapLoad basert på level
+     */
     public void SelectLevelUi() {
         Rectangle rect = new Rectangle();
         rect.setWidth(x);
